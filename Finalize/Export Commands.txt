@@ -17,4 +17,5 @@ prepare2.php
 mysqldump.exe -u root -p  final > c:\tmp\final.sql
 
 
-mysql.exe -u root -p  test_demo < c:\tmp\final.sql
+#mysql.exe -u root -p  test_demo < c:\tmp\final.sql
+mysql.exe -u root -p  test_demo < c:\tmp\final2.sql
