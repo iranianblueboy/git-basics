@@ -1,0 +1,20 @@
+
+prepare1.php
+
+
+mysqldump.exe -u root -p  pnw z_bidder_mrp_request_join z_contact z_contact_type z_contractors z_members z_mrp_approved_hours  z_mrp_requests z_mrp_request_parent_hours z_mrp_request_scope_join  z_projects z_project_contact_join z_project_contractor_join z_project_visit z_project_visit_stage_join z_project_visit_user_id_join z_request_child_hours > c:\tmp\pnw.sql
+
+
+
+
+
+mysql.exe -u root -p  final < c:\tmp\pnw.sql
+
+lastcleanup\contractorCleanup.php
+
+prepare2.php
+
+mysqldump.exe -u root -p  final > c:\tmp\final.sql
+
+
+mysql.exe -u root -p  test_demo < c:\tmp\final.sql
